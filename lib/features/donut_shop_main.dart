@@ -1,4 +1,5 @@
 import 'package:donut_shop_app/constants/utils.dart';
+import 'package:donut_shop_app/widgets/bottom_bar.dart';
 import 'package:donut_shop_app/widgets/side_menu.dart';
 import 'package:flutter/material.dart';
 
@@ -18,9 +19,14 @@ class DonutShopMain extends StatelessWidget {
       drawer: Drawer(
         child: DonutSideMenu(),
       ),
-      body: Center(
-        child: Text('Donut App'),
-      ),
+      body: Column(
+        children: [
+          Expanded(child: Container()),
+          Container(
+            child: DonutBottomBar(),
+          )
+        ],
+      )
     );
   }
 }
