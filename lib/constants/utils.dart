@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
 
 class Utils{
+
+  static GlobalKey<NavigatorState> mainListNav = GlobalKey();
+  static GlobalKey<NavigatorState> mainAppNav = GlobalKey();
+
   static const Color mainColor = Color(0xFFFF0F7E);
   static const Color mainDark = Color(0xFF980346);
   static const String donutLogoWhiteNoText = 'https://romanejaquez.github.io/flutter-codelab4/assets/donut_shop_logowhite_notext.png';

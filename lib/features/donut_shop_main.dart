@@ -21,7 +21,34 @@ class DonutShopMain extends StatelessWidget {
       ),
       body: Column(
         children: [
-          Expanded(child: Container()),
+          Expanded(
+              child: Navigator(
+                key: Utils.mainListNav,
+                initialRoute: '/main',
+                onGenerateRoute: (RouteSettings settings){
+                  Widget page;
+                  switch(settings.name){
+                    case '/main':
+                    page = Center(child: Text('main'),);
+                    break;
+                    case '/favourites':
+                    page = Center(child: Text('favourites'),);
+                    break;
+                    case '/shoppingcart':
+                    page = Center(child: Text('shopping cart'),);
+                    break;
+                    default:
+                      page = Center(
+                        child: Text('main'),
+                      );
+                      break;
+                  }
+
+                  return PageRouteBuilder(pageBuilder: (_,__,___)=> page,
+                  transitionDuration: Duration(seconds: 0));
+                },
+              )
+          ),
           Container(
             child: DonutBottomBar(),
           )

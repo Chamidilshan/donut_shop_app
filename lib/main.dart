@@ -1,3 +1,5 @@
+import 'package:donut_shop_app/constants/utils.dart';
+import 'package:donut_shop_app/features/donut_shop_main.dart';
 import 'package:donut_shop_app/features/splash_sceen.dart';
 import 'package:donut_shop_app/models/provider_selection.dart';
 import 'package:flutter/material.dart';
@@ -21,11 +23,13 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
+      // initialRoute: '/',
+      // navigatorKey: Utils.mainAppNav,
+      // routes: {
+      //   '/': (context)=>SplashPage(),
+      //   '/main': (context)=>DonutShopMain()
+      // },
       title: 'Donut App',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
-      ),
       home: SplashPage()
     );
   }

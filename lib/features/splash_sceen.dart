@@ -33,6 +33,9 @@ class _SplashPageState extends State<SplashPage> with SingleTickerProviderStateM
 
   @override
   Widget build(BuildContext context) {
+    Future.delayed(Duration(seconds: 2), () {
+      Utils.mainAppNav.currentState!.pushReplacementNamed('/main');
+    });
 
     Future.delayed(Duration(seconds: 2), () {
       Navigator.of(context).pushReplacement(
