@@ -1,4 +1,5 @@
 import 'package:donut_shop_app/constants/utils.dart';
+import 'package:donut_shop_app/features/donut_shop_details.dart';
 import 'package:donut_shop_app/features/donut_shop_main.dart';
 import 'package:donut_shop_app/features/splash_sceen.dart';
 import 'package:donut_shop_app/models/provider_selection.dart';
@@ -30,7 +31,7 @@ class MyApp extends StatelessWidget {
       //   '/main': (context)=>DonutShopMain()
       // },
       title: 'Donut App',
-      home: SplashPage()
+      home: DonutShopDetails()
     );
   }
 }
